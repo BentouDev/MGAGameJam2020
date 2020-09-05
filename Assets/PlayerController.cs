@@ -6,21 +6,27 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody rb;
+    public float speed;
 
-    // Start is called before the first frame update
+    public Vector2 inputDir;
+
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //rb.MovePosition(rb.position + new Vector3(inputDir.x * speed * Time.deltaTime, 0.0f, 0.0f));
+        rb.velocity = new Vector3(inputDir.x * speed * Time.deltaTime, 0.0f, 0.0f);
     }
 
     public void OnMove(InputValue value)
     {
-        Vector2 dir = value.Get<Vector2>();
-        rb.AddForce(new Vector3(dir.x, 0.0f, dir.y));
+        inputDir = value.Get<Vector2>();
+    }
+
+    public void FixedUpdate()
+    {
+        //rb.AddForce(inputDir.x * speed * Time.fixedDeltaTime, 0.0f, 0.0f);
     }
 }
