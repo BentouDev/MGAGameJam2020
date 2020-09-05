@@ -12,7 +12,11 @@ public class GameTimer : MonoBehaviour
 
     void Start()
     {
-        
+    }
+
+    public bool IsElapsed()
+    {
+        return TimeLimit == 0.0f;
     }
 
     // Update is called once per frame
