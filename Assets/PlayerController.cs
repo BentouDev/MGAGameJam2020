@@ -35,21 +35,28 @@ public class PlayerController : MonoBehaviour
                 currState = EState.Idle;
             }
         }
-        else if (inputDir.x < 0.0f)
+        else
         {
-            if (currState != EState.MoveFwd)
+            Vector3 local_dir = transform.InverseTransformDirection(new Vector3(inputDir.x, 0.0f, 0.0f));
+
+            if (local_dir.z > 0.0f)
             {
-                animator.SetTrigger("ToMoveFwd");
-                currState = EState.MoveFwd;
+                if (currState != EState.MoveFwd)
+                {
+                    animator.SetTrigger("ToMoveFwd");
+                    currState = EState.MoveFwd;
+                }
             }
-        }
-        else if (inputDir.x > 0.0f)
-        {
-            if (currState != EState.MoveBwd)
+            else if (local_dir.z < 0.0f)
             {
-                animator.SetTrigger("ToMoveBwd");
-                currState = EState.MoveBwd;
+                if (currState != EState.MoveBwd)
+                {
+                    animator.SetTrigger("ToMoveBwd");
+                    currState = EState.MoveBwd;
+                }
             }
+
+
         }
     }
 
