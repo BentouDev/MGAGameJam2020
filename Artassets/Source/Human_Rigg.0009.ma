@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Human_Rigg.0009.ma
-//Last modified: Sat, Sep 05, 2020 06:47:05 PM
+//Last modified: Sat, Sep 05, 2020 06:51:01 PM
 //Codeset: 1250
 requires maya "2018";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
