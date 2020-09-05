@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4012402679769104478}
+  - {fileID: 6891632064637783184}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -120,7 +120,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5324046410083775046}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 1f4d7a20ff77a7449858816bc266419b, type: 3}
   m_Controller: {fileID: 9100000, guid: 30534dfd8aae33344aa1c8ff7993f94c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -130,7 +130,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &3468989456458704821
+--- !u!1001 &6352687519381859195
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -185,15 +185,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sneakvangelion
       objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
---- !u!4 &4012402679769104478 stripped
+--- !u!4 &6891632064637783184 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
-  m_PrefabInstance: {fileID: 3468989456458704821}
+  m_PrefabInstance: {fileID: 6352687519381859195}
   m_PrefabAsset: {fileID: 0}
