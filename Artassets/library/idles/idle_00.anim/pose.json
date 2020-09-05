@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "mayaSceneFile": "E:/Gamedev Projects/MGA2020/MGAGameJam2020/Artassets/Source/Fatvelion.0000.ma", 
+    "mayaSceneFile": "E:/Gamedev Projects/MGA2020/MGAGameJam2020/Artassets/Source/Sneakvangelion.0000.ma", 
     "angularUnit": "deg", 
     "description": "", 
     "endFrame": 120, 
@@ -10,7 +10,7 @@
     "startFrame": 60, 
     "timeUnit": "ntscf", 
     "mayaVersion": "2018", 
-    "ctime": "1599316223"
+    "ctime": "1599345997"
   }
 ,
   "objects": {
@@ -94,7 +94,7 @@
         }
       }
     }, 
-    "Weapon_2_CTL": {
+    "L_Arm_2_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -121,16 +121,19 @@
           "value": true
         }, 
         "rotateX": {
+          "curve": "CURVE6", 
           "type": "doubleAngle", 
-          "value": 0.0
+          "value": -42.732389462329785
         }, 
         "rotateY": {
+          "curve": "CURVE7", 
           "type": "doubleAngle", 
-          "value": 0.0
+          "value": 7.076444005959554
         }, 
         "rotateZ": {
+          "curve": "CURVE8", 
           "type": "doubleAngle", 
-          "value": 0.0
+          "value": -50.015557544300414
         }, 
         "scaleZ": {
           "type": "double", 
@@ -182,7 +185,7 @@
         }
       }
     }, 
-    "R_Middle_finger_top_CTL": {
+    "L_Indicative_finger_2_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -273,17 +276,17 @@
     "PV_L_Leg_2_CTL": {
       "attrs": {
         "translateX": {
-          "curve": "CURVE6", 
+          "curve": "CURVE10", 
           "type": "doubleLinear", 
           "value": -2.250235222184307
         }, 
         "translateY": {
-          "curve": "CURVE7", 
+          "curve": "CURVE11", 
           "type": "doubleLinear", 
           "value": 13.636779670220562
         }, 
         "translateZ": {
-          "curve": "CURVE8", 
+          "curve": "CURVE12", 
           "type": "doubleLinear", 
           "value": 0.9197213404715932
         }, 
@@ -305,22 +308,27 @@
         }
       }
     }, 
-    "R_Foot_1_CTL": {
+    "R_Middle_finger_2_CTL": {
       "attrs": {
         "translateX": {
-          "curve": "CURVE10", 
           "type": "doubleLinear", 
-          "value": -13.90851685537386
+          "value": 0.0
         }, 
         "translateY": {
-          "curve": "CURVE11", 
           "type": "doubleLinear", 
-          "value": -0.21248610126120446
+          "value": 0.0
         }, 
         "translateZ": {
-          "curve": "CURVE12", 
           "type": "doubleLinear", 
-          "value": 1.4363990048612874
+          "value": 0.0
+        }, 
+        "scaleX": {
+          "type": "double", 
+          "value": 1.0
+        }, 
+        "scaleY": {
+          "type": "double", 
+          "value": 1.0
         }, 
         "visibility": {
           "type": "bool", 
@@ -331,13 +339,16 @@
           "value": 0.0
         }, 
         "rotateY": {
-          "curve": "CURVE13", 
           "type": "doubleAngle", 
-          "value": -43.43175841079969
+          "value": 0.0
         }, 
         "rotateZ": {
           "type": "doubleAngle", 
           "value": 0.0
+        }, 
+        "scaleZ": {
+          "type": "double", 
+          "value": 1.0
         }
       }
     }, 
@@ -385,7 +396,71 @@
         }
       }
     }, 
-    "L_Indicative_finger_1_CTL": {
+    "R_Arm_1_CTL": {
+      "attrs": {
+        "rotateX": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateY": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateZ": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "visibility": {
+          "type": "bool", 
+          "value": true
+        }
+      }
+    }, 
+    "Weapon_2_CTL": {
+      "attrs": {
+        "translateX": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "translateY": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "translateZ": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "scaleX": {
+          "type": "double", 
+          "value": 1.0
+        }, 
+        "scaleY": {
+          "type": "double", 
+          "value": 1.0
+        }, 
+        "visibility": {
+          "type": "bool", 
+          "value": true
+        }, 
+        "rotateX": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateY": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateZ": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "scaleZ": {
+          "type": "double", 
+          "value": 1.0
+        }
+      }
+    }, 
+    "Rocket_jnt_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -473,27 +548,7 @@
         }
       }
     }, 
-    "R_Arm_1_CTL": {
-      "attrs": {
-        "rotateX": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateY": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateZ": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "visibility": {
-          "type": "bool", 
-          "value": true
-        }
-      }
-    }, 
-    "R_IK_FK_CTL": {
+    "L_Indicative_finger_1_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -501,50 +556,83 @@
         }, 
         "translateY": {
           "type": "doubleLinear", 
-          "value": -1.4210854715202004e-14
+          "value": 0.0
         }, 
         "translateZ": {
           "type": "doubleLinear", 
-          "value": 8.881784197001252e-16
-        }, 
-        "TH_FK_IK": {
-          "type": "double", 
           "value": 0.0
         }, 
         "scaleX": {
           "type": "double", 
-          "value": 2.0
+          "value": 1.0
         }, 
         "scaleY": {
           "type": "double", 
-          "value": 2.0
+          "value": 1.0
         }, 
         "visibility": {
           "type": "bool", 
           "value": true
         }, 
         "rotateX": {
-          "curve": "CURVE15", 
           "type": "doubleAngle", 
-          "value": -20.77814904950275
+          "value": 0.0
         }, 
         "rotateY": {
-          "curve": "CURVE16", 
           "type": "doubleAngle", 
-          "value": 0.4606714652142293
+          "value": 0.0
         }, 
         "rotateZ": {
-          "curve": "CURVE17", 
           "type": "doubleAngle", 
-          "value": -3.4144471083629377
+          "value": 0.0
         }, 
         "scaleZ": {
           "type": "double", 
-          "value": 2.0
-        }, 
-        "EquipOneHanded": {
-          "type": "double", 
+          "value": 1.0
+        }
+      }
+    }, 
+    "R_Indicative_finger_top_CTL": {
+      "attrs": {
+        "translateX": {
+          "type": "doubleLinear", 
           "value": 0.0
+        }, 
+        "translateY": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "translateZ": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "scaleX": {
+          "type": "double", 
+          "value": 1.0
+        }, 
+        "scaleY": {
+          "type": "double", 
+          "value": 1.0
+        }, 
+        "visibility": {
+          "type": "bool", 
+          "value": true
+        }, 
+        "rotateX": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateY": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateZ": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "scaleZ": {
+          "type": "double", 
+          "value": 1.0
         }
       }
     }, 
@@ -580,7 +668,7 @@
         }
       }
     }, 
-    "L_Arm_2_CTL": {
+    "L_Little_finger_2_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -607,19 +695,16 @@
           "value": true
         }, 
         "rotateX": {
-          "curve": "CURVE19", 
           "type": "doubleAngle", 
-          "value": -42.732389462329785
+          "value": 0.0
         }, 
         "rotateY": {
-          "curve": "CURVE20", 
           "type": "doubleAngle", 
-          "value": 7.076444005959554
+          "value": 0.0
         }, 
         "rotateZ": {
-          "curve": "CURVE21", 
           "type": "doubleAngle", 
-          "value": -50.015557544300414
+          "value": 0.0
         }, 
         "scaleZ": {
           "type": "double", 
@@ -630,108 +715,28 @@
     "R_IK_FK_switcher|IK": {
       "attrs": {}
     }, 
-    "R_Ring_finger_top_CTL": {
+    "L_IK_FK_switcher|IK": {
       "attrs": {
-        "translateX": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateY": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateZ": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "scaleX": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "scaleY": {
-          "type": "double", 
-          "value": 1.0
-        }, 
         "visibility": {
           "type": "bool", 
           "value": true
-        }, 
-        "rotateX": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateY": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateZ": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "scaleZ": {
-          "type": "double", 
-          "value": 1.0
-        }
-      }
-    }, 
-    "L_Indicative_finger_top_CTL": {
-      "attrs": {
-        "translateX": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateY": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateZ": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "scaleX": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "scaleY": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "visibility": {
-          "type": "bool", 
-          "value": true
-        }, 
-        "rotateX": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateY": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateZ": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "scaleZ": {
-          "type": "double", 
-          "value": 1.0
         }
       }
     }, 
     "R_Arm_2_CTL": {
       "attrs": {
         "rotateX": {
-          "curve": "CURVE23", 
+          "curve": "CURVE14", 
           "type": "doubleAngle", 
           "value": 50.918272326509886
         }, 
         "rotateY": {
-          "curve": "CURVE24", 
+          "curve": "CURVE15", 
           "type": "doubleAngle", 
           "value": -41.90611827568702
         }, 
         "rotateZ": {
-          "curve": "CURVE25", 
+          "curve": "CURVE16", 
           "type": "doubleAngle", 
           "value": -66.52678582537729
         }, 
@@ -785,27 +790,22 @@
         }
       }
     }, 
-    "L_Indicative_finger_2_CTL": {
+    "R_Foot_1_CTL": {
       "attrs": {
         "translateX": {
+          "curve": "CURVE18", 
           "type": "doubleLinear", 
-          "value": 0.0
+          "value": -13.90851685537386
         }, 
         "translateY": {
+          "curve": "CURVE19", 
           "type": "doubleLinear", 
-          "value": 0.0
+          "value": -0.21248610126120446
         }, 
         "translateZ": {
+          "curve": "CURVE20", 
           "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "scaleX": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "scaleY": {
-          "type": "double", 
-          "value": 1.0
+          "value": 1.4363990048612874
         }, 
         "visibility": {
           "type": "bool", 
@@ -816,16 +816,13 @@
           "value": 0.0
         }, 
         "rotateY": {
+          "curve": "CURVE21", 
           "type": "doubleAngle", 
-          "value": 0.0
+          "value": -43.43175841079969
         }, 
         "rotateZ": {
           "type": "doubleAngle", 
           "value": 0.0
-        }, 
-        "scaleZ": {
-          "type": "double", 
-          "value": 1.0
         }
       }
     }, 
@@ -861,7 +858,7 @@
         }
       }
     }, 
-    "L_Thumb_1_CTL": {
+    "R_Thumb_top_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -949,7 +946,7 @@
         }
       }
     }, 
-    "R_Thumb_top_CTL": {
+    "L_Thumb_1_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -1081,7 +1078,7 @@
         }
       }
     }, 
-    "R_Middle_finger_2_CTL": {
+    "L_Ling_finger_top_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -1128,17 +1125,17 @@
     "Spin_1_CTL": {
       "attrs": {
         "rotateX": {
-          "curve": "CURVE27", 
+          "curve": "CURVE23", 
           "type": "doubleAngle", 
           "value": -6.9940463601752825
         }, 
         "rotateY": {
-          "curve": "CURVE28", 
+          "curve": "CURVE24", 
           "type": "doubleAngle", 
           "value": -2.8558034463301154
         }, 
         "rotateZ": {
-          "curve": "CURVE29", 
+          "curve": "CURVE25", 
           "type": "doubleAngle", 
           "value": -1.9891890991789059
         }, 
@@ -1212,7 +1209,7 @@
         }
       }
     }, 
-    "R_Ring_finger_2_CTL": {
+    "L_Middle_finger_1_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -1300,22 +1297,20 @@
         }
       }
     }, 
-    "Spin_3_CTL": {
+    "Spin_4_CTL": {
       "attrs": {
         "rotateX": {
-          "curve": "CURVE31", 
           "type": "doubleAngle", 
-          "value": -10.050195786690761
+          "value": 0.0
         }, 
         "rotateY": {
-          "curve": "CURVE32", 
+          "curve": "CURVE27", 
           "type": "doubleAngle", 
-          "value": 8.461924195320192
+          "value": 2.6072575334956807
         }, 
         "rotateZ": {
-          "curve": "CURVE33", 
           "type": "doubleAngle", 
-          "value": 0.4410459248383676
+          "value": 0.0
         }, 
         "visibility": {
           "type": "bool", 
@@ -1439,15 +1434,15 @@
         }, 
         "rotateX": {
           "type": "doubleAngle", 
-          "value": -1.1728295387896722e-14
+          "value": 0.0
         }, 
         "rotateY": {
           "type": "doubleAngle", 
-          "value": 5.0690090235824825e-15
+          "value": 0.0
         }, 
         "rotateZ": {
           "type": "doubleAngle", 
-          "value": 1.836273366876203e-14
+          "value": 0.0
         }, 
         "scaleZ": {
           "type": "double", 
@@ -1499,7 +1494,62 @@
         }
       }
     }, 
-    "R_Indicative_finger_top_CTL": {
+    "R_IK_FK_CTL": {
+      "attrs": {
+        "translateX": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "translateY": {
+          "type": "doubleLinear", 
+          "value": -1.4210854715202004e-14
+        }, 
+        "translateZ": {
+          "type": "doubleLinear", 
+          "value": 8.881784197001252e-16
+        }, 
+        "TH_FK_IK": {
+          "type": "double", 
+          "value": 0.0
+        }, 
+        "scaleX": {
+          "type": "double", 
+          "value": 2.0
+        }, 
+        "scaleY": {
+          "type": "double", 
+          "value": 2.0
+        }, 
+        "visibility": {
+          "type": "bool", 
+          "value": true
+        }, 
+        "rotateX": {
+          "curve": "CURVE29", 
+          "type": "doubleAngle", 
+          "value": -20.77814904950275
+        }, 
+        "rotateY": {
+          "curve": "CURVE30", 
+          "type": "doubleAngle", 
+          "value": 0.4606714652142293
+        }, 
+        "rotateZ": {
+          "curve": "CURVE31", 
+          "type": "doubleAngle", 
+          "value": -3.4144471083629377
+        }, 
+        "scaleZ": {
+          "type": "double", 
+          "value": 2.0
+        }, 
+        "EquipOneHanded": {
+          "type": "double", 
+          "value": 0.0
+        }
+      }
+    }, 
+    "L_Indicative_finger_top_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -1543,45 +1593,25 @@
         }
       }
     }, 
-    "Spin_4_CTL": {
-      "attrs": {
-        "rotateX": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateY": {
-          "curve": "CURVE35", 
-          "type": "doubleAngle", 
-          "value": 2.6072575334956807
-        }, 
-        "rotateZ": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "visibility": {
-          "type": "bool", 
-          "value": true
-        }
-      }
-    }, 
     "L_Arm_4_CTL": {
       "attrs": {
         "rotateX": {
-          "curve": "CURVE37", 
+          "curve": "CURVE33", 
           "type": "doubleAngle", 
-          "value": -4.757848414160787
+          "value": -2.8852258604823424
         }, 
         "rotateY": {
-          "curve": "CURVE38", 
+          "curve": "CURVE34", 
           "type": "doubleAngle", 
           "value": -127.2481190531122
         }, 
         "rotateZ": {
-          "curve": "CURVE39", 
+          "curve": "CURVE35", 
           "type": "doubleAngle", 
-          "value": 5.4173848657217505
+          "value": 3.2851779943735404
         }, 
         "visibility": {
+          "curve": "CURVE36", 
           "type": "bool", 
           "value": true
         }
@@ -1598,19 +1628,19 @@
     "Head_CTL": {
       "attrs": {
         "rotateX": {
-          "curve": "CURVE41", 
+          "curve": "CURVE38", 
           "type": "doubleAngle", 
           "value": 24.47650910038171
         }, 
         "rotateY": {
-          "curve": "CURVE42", 
+          "curve": "CURVE39", 
           "type": "doubleAngle", 
           "value": 9.065748117189136
         }, 
         "rotateZ": {
-          "curve": "CURVE43", 
+          "curve": "CURVE40", 
           "type": "doubleAngle", 
-          "value": -1.2826816298378578
+          "value": -1.282681629837858
         }, 
         "visibility": {
           "type": "bool", 
@@ -1618,11 +1648,47 @@
         }
       }
     }, 
-    "L_IK_FK_switcher|IK": {
+    "R_Ring_finger_top_CTL": {
       "attrs": {
+        "translateX": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "translateY": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "translateZ": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "scaleX": {
+          "type": "double", 
+          "value": 1.0
+        }, 
+        "scaleY": {
+          "type": "double", 
+          "value": 1.0
+        }, 
         "visibility": {
           "type": "bool", 
           "value": true
+        }, 
+        "rotateX": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateY": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateZ": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "scaleZ": {
+          "type": "double", 
+          "value": 1.0
         }
       }
     }, 
@@ -1639,6 +1705,50 @@
         "translateZ": {
           "type": "doubleLinear", 
           "value": 5.776479290797558e-17
+        }, 
+        "scaleX": {
+          "type": "double", 
+          "value": 1.0
+        }, 
+        "scaleY": {
+          "type": "double", 
+          "value": 1.0
+        }, 
+        "visibility": {
+          "type": "bool", 
+          "value": true
+        }, 
+        "rotateX": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateY": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateZ": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "scaleZ": {
+          "type": "double", 
+          "value": 1.0
+        }
+      }
+    }, 
+    "R_Middle_finger_top_CTL": {
+      "attrs": {
+        "translateX": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "translateY": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "translateZ": {
+          "type": "doubleLinear", 
+          "value": 0.0
         }, 
         "scaleX": {
           "type": "double", 
@@ -1746,6 +1856,29 @@
         }
       }
     }, 
+    "R_Arm_4_CTL": {
+      "attrs": {
+        "rotateX": {
+          "curve": "CURVE42", 
+          "type": "doubleAngle", 
+          "value": -55.02047467028621
+        }, 
+        "rotateY": {
+          "curve": "CURVE43", 
+          "type": "doubleAngle", 
+          "value": -59.0943070882309
+        }, 
+        "rotateZ": {
+          "curve": "CURVE44", 
+          "type": "doubleAngle", 
+          "value": 67.90150118826683
+        }, 
+        "visibility": {
+          "type": "bool", 
+          "value": true
+        }
+      }
+    }, 
     "R_Rittle_finger_1_CTL": {
       "attrs": {
         "translateX": {
@@ -1834,51 +1967,7 @@
         }
       }
     }, 
-    "L_Ling_finger_top_CTL": {
-      "attrs": {
-        "translateX": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateY": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateZ": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "scaleX": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "scaleY": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "visibility": {
-          "type": "bool", 
-          "value": true
-        }, 
-        "rotateX": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateY": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateZ": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "scaleZ": {
-          "type": "double", 
-          "value": 1.0
-        }
-      }
-    }, 
-    "L_Little_finger_2_CTL": {
+    "R_Middle_finger_1_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -1925,17 +2014,17 @@
     "Spin_2_CTL": {
       "attrs": {
         "rotateX": {
-          "curve": "CURVE45", 
+          "curve": "CURVE46", 
           "type": "doubleAngle", 
           "value": -8.262237835055487
         }, 
         "rotateY": {
-          "curve": "CURVE46", 
+          "curve": "CURVE47", 
           "type": "doubleAngle", 
           "value": -8.26247433332897
         }, 
         "rotateZ": {
-          "curve": "CURVE47", 
+          "curve": "CURVE48", 
           "type": "doubleAngle", 
           "value": -3.365653262977818
         }, 
@@ -1945,51 +2034,7 @@
         }
       }
     }, 
-    "L_Middle_finger_1_CTL": {
-      "attrs": {
-        "translateX": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateY": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateZ": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "scaleX": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "scaleY": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "visibility": {
-          "type": "bool", 
-          "value": true
-        }, 
-        "rotateX": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateY": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateZ": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "scaleZ": {
-          "type": "double", 
-          "value": 1.0
-        }
-      }
-    }, 
-    "L_Ling_finger_2_CTL": {
+    "R_Ring_finger_2_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -2077,45 +2122,66 @@
         }
       }
     }, 
-    "R_Arm_4_CTL": {
+    "L_Thumb_2_CTL": {
       "attrs": {
-        "rotateX": {
-          "curve": "CURVE49", 
-          "type": "doubleAngle", 
-          "value": -55.02047467028621
+        "translateX": {
+          "type": "doubleLinear", 
+          "value": 0.0
         }, 
-        "rotateY": {
-          "curve": "CURVE50", 
-          "type": "doubleAngle", 
-          "value": -59.0943070882309
+        "translateY": {
+          "type": "doubleLinear", 
+          "value": 0.0
         }, 
-        "rotateZ": {
-          "curve": "CURVE51", 
-          "type": "doubleAngle", 
-          "value": 67.90150118826683
+        "translateZ": {
+          "type": "doubleLinear", 
+          "value": 0.0
+        }, 
+        "scaleX": {
+          "type": "double", 
+          "value": 1.0
+        }, 
+        "scaleY": {
+          "type": "double", 
+          "value": 1.0
         }, 
         "visibility": {
           "type": "bool", 
           "value": true
+        }, 
+        "rotateX": {
+          "type": "doubleAngle", 
+          "value": 83.11681105223205
+        }, 
+        "rotateY": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "rotateZ": {
+          "type": "doubleAngle", 
+          "value": 0.0
+        }, 
+        "scaleZ": {
+          "type": "double", 
+          "value": 1.0
         }
       }
     }, 
     "R_Hand_1_CTL": {
       "attrs": {
         "rotateX": {
-          "curve": "CURVE53", 
+          "curve": "CURVE50", 
           "type": "doubleAngle", 
-          "value": 14.089905323666141
+          "value": 19.50730492021901
         }, 
         "rotateY": {
-          "curve": "CURVE54", 
+          "curve": "CURVE51", 
           "type": "doubleAngle", 
-          "value": -0.10276581383120446
+          "value": -23.386671216929116
         }, 
         "rotateZ": {
-          "curve": "CURVE55", 
+          "curve": "CURVE52", 
           "type": "doubleAngle", 
-          "value": 2.123187100415265
+          "value": 24.665606037601194
         }, 
         "visibility": {
           "type": "bool", 
@@ -2123,7 +2189,7 @@
         }
       }
     }, 
-    "R_Middle_finger_1_CTL": {
+    "R_Foot_3_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -2345,19 +2411,42 @@
     "L_Hand_1_CTL": {
       "attrs": {
         "rotateX": {
-          "curve": "CURVE57", 
+          "curve": "CURVE54", 
           "type": "doubleAngle", 
-          "value": -5.040057959287694
+          "value": 20.666331461215286
         }, 
         "rotateY": {
-          "curve": "CURVE58", 
+          "curve": "CURVE55", 
           "type": "doubleAngle", 
-          "value": -25.469143933067222
+          "value": -22.19476768888265
         }, 
         "rotateZ": {
+          "curve": "CURVE56", 
+          "type": "doubleAngle", 
+          "value": 33.64858845293921
+        }, 
+        "visibility": {
+          "type": "bool", 
+          "value": true
+        }
+      }
+    }, 
+    "Spin_3_CTL": {
+      "attrs": {
+        "rotateX": {
+          "curve": "CURVE58", 
+          "type": "doubleAngle", 
+          "value": -10.050195786690761
+        }, 
+        "rotateY": {
           "curve": "CURVE59", 
           "type": "doubleAngle", 
-          "value": 0.32066601889865914
+          "value": 8.461924195320192
+        }, 
+        "rotateZ": {
+          "curve": "CURVE60", 
+          "type": "doubleAngle", 
+          "value": 0.4410459248383676
         }, 
         "visibility": {
           "type": "bool", 
@@ -2368,17 +2457,17 @@
     "Mother_joint_CTL": {
       "attrs": {
         "translateX": {
-          "curve": "CURVE61", 
+          "curve": "CURVE62", 
           "type": "doubleLinear", 
           "value": -0.6016824186787129
         }, 
         "translateY": {
-          "curve": "CURVE62", 
+          "curve": "CURVE63", 
           "type": "doubleLinear", 
           "value": 0.37924299689393604
         }, 
         "translateZ": {
-          "curve": "CURVE63", 
+          "curve": "CURVE64", 
           "type": "doubleLinear", 
           "value": -0.4088962736734259
         }, 
@@ -2395,17 +2484,17 @@
           "value": true
         }, 
         "rotateX": {
-          "curve": "CURVE64", 
+          "curve": "CURVE65", 
           "type": "doubleAngle", 
           "value": -15.012245840399352
         }, 
         "rotateY": {
-          "curve": "CURVE65", 
+          "curve": "CURVE66", 
           "type": "doubleAngle", 
           "value": -3.4668777891590508
         }, 
         "rotateZ": {
-          "curve": "CURVE66", 
+          "curve": "CURVE67", 
           "type": "doubleAngle", 
           "value": -23.267339499458323
         }, 
@@ -2415,7 +2504,7 @@
         }
       }
     }, 
-    "R_Foot_3_CTL": {
+    "L_Ling_finger_2_CTL": {
       "attrs": {
         "translateX": {
           "type": "doubleLinear", 
@@ -2503,50 +2592,6 @@
         }
       }
     }, 
-    "L_Thumb_2_CTL": {
-      "attrs": {
-        "translateX": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateY": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "translateZ": {
-          "type": "doubleLinear", 
-          "value": 0.0
-        }, 
-        "scaleX": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "scaleY": {
-          "type": "double", 
-          "value": 1.0
-        }, 
-        "visibility": {
-          "type": "bool", 
-          "value": true
-        }, 
-        "rotateX": {
-          "type": "doubleAngle", 
-          "value": 83.11681105223205
-        }, 
-        "rotateY": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "rotateZ": {
-          "type": "doubleAngle", 
-          "value": 0.0
-        }, 
-        "scaleZ": {
-          "type": "double", 
-          "value": 1.0
-        }
-      }
-    }, 
     "Spin_5_CTL": {
       "attrs": {
         "rotateX": {
@@ -2554,7 +2599,7 @@
           "value": 0.0
         }, 
         "rotateY": {
-          "curve": "CURVE68", 
+          "curve": "CURVE69", 
           "type": "doubleAngle", 
           "value": -0.33063817444563304
         }, 
@@ -2615,17 +2660,17 @@
     "PV_R_Leg_2_CTL": {
       "attrs": {
         "translateX": {
-          "curve": "CURVE70", 
+          "curve": "CURVE71", 
           "type": "doubleLinear", 
           "value": -5.889521101888632
         }, 
         "translateY": {
-          "curve": "CURVE71", 
+          "curve": "CURVE72", 
           "type": "doubleLinear", 
           "value": 36.404838632782216
         }, 
         "translateZ": {
-          "curve": "CURVE72", 
+          "curve": "CURVE73", 
           "type": "doubleLinear", 
           "value": -7.752126829518521
         }, 
