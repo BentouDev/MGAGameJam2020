@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //rb.MovePosition(rb.position + new Vector3(inputDir.x * speed * Time.deltaTime, 0.0f, 0.0f));
-        rb.velocity = new Vector3(inputDir.x * speed * Time.deltaTime, 0.0f, 0.0f);
+        rb.velocity = new Vector3(0.0f, 0.0f, inputDir.x * speed * Time.deltaTime);
     }
 
     public void OnMove(InputValue value)
