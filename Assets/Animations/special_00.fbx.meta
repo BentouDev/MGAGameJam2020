@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 0cdb527ff3a5c4c4193b9051d6104376
+guid: 0eee56a2b7275114e94ce8d2bd666ddb
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
-      74: -9025794395241735331
-    second: hit_react_00
+      74: -7456443797349940286
+    second: special_00
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -18,7 +18,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Avatar creation failed:\n\tCannot find root motion transform
+      'Character_Rig'.\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -35,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: hit_react_00
-      takeName: hit_react_00
+      name: special_00
+      takeName: special_00
       internalID: 0
-      firstFrame: 160
-      lastFrame: 190
+      firstFrame: 460
+      lastFrame: 520
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -53,7 +54,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -62,7 +63,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 160
+      additiveReferencePoseFrame: 460
     isReadable: 0
   meshes:
     lODScreenPercentages: []
