@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7640891052198913434}
+  - {fileID: 4012402679769104478}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 860719376871397500}
   speed: 300
-  inputDir: {x: 0, y: 0}
+  wantedMoveDir: {x: 0, y: 0}
 --- !u!114 &5324046410083775103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &7891252748773720689
+--- !u!1001 &3468989456458704821
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -186,18 +186,14 @@ PrefabInstance:
       value: Sneakvangelion
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 30534dfd8aae33344aa1c8ff7993f94c, type: 2}
-    - target: {fileID: 5866666021909216657, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
---- !u!4 &7640891052198913434 stripped
+--- !u!4 &4012402679769104478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
-  m_PrefabInstance: {fileID: 7891252748773720689}
+  m_PrefabInstance: {fileID: 3468989456458704821}
   m_PrefabAsset: {fileID: 0}
