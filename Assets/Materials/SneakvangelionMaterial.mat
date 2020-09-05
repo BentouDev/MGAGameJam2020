@@ -8,18 +8,29 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SneakvangelionMaterial
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: a1b5dd4708dfb56419af121cdb9abdd9, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_279D0B34:
+        m_Texture: {fileID: 2800000, guid: 92fd771b2f36fc544bbd47e8fb38c598, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_7A21EE06:
+        m_Texture: {fileID: 2800000, guid: b050acbaf12d47d45b48e7994641efde, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_A7BBDFCF:
+        m_Texture: {fileID: 2800000, guid: 7d26c57e14b739d4fa38c8bd0f9b0b91, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 7d26c57e14b739d4fa38c8bd0f9b0b91, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -71,6 +82,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_66B58A8A: {r: 0, g: 0, b: 0, a: 0}
+    - Color_7D3C03B6: {r: 0, g: 0, b: 0, a: 0}
+    - Color_9E19467A: {r: 63.999992, g: 6.031413, b: 6.031413, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
