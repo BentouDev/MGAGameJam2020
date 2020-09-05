@@ -5,19 +5,52 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody rb;
+    private Rigidbody rb;
+    public Animator animator;
     public float speed;
+    enum EState
+    {
+        Idle,
+        MoveFwd,
+        MoveBwd
+    }
 
     public Vector2 inputDir;
+    private EState currState;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
     }
-
     void Update()
     {
         //rb.MovePosition(rb.position + new Vector3(inputDir.x * speed * Time.deltaTime, 0.0f, 0.0f));
-        rb.velocity = new Vector3(0.0f, 0.0f, inputDir.x * speed * Time.deltaTime);
+        rb.velocity = new Vector3(inputDir.x * speed * Time.deltaTime, 0.0f, 0.0f);
+
+        if (Mathf.Approximately(inputDir.x, 0.0f))
+        {
+            if (currState != EState.Idle)
+            {
+                animator.SetTrigger("ToIdle");
+                currState = EState.Idle;
+            }
+        }
+        else if (inputDir.x < 0.0f)
+        {
+            if (currState != EState.MoveFwd)
+            {
+                animator.SetTrigger("ToMoveFwd");
+                currState = EState.MoveFwd;
+            }
+        }
+        else if (inputDir.x > 0.0f)
+        {
+            if (currState != EState.MoveBwd)
+            {
+                animator.SetTrigger("ToMoveBwd");
+                currState = EState.MoveBwd;
+            }
+        }
     }
 
     public void OnMove(InputValue value)
