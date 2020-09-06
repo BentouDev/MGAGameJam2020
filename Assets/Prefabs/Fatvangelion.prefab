@@ -84,6 +84,7 @@ MonoBehaviour:
   rFoot: {fileID: 6502265666874622}
   health: {fileID: 0}
   wantedMoveDir: {x: 0, y: 0}
+  IsMirrored: 0
   damagerPrefab: {fileID: 7980693458492477890, guid: e5674d1436620eb44ba79b76f8e11b83, type: 3}
 --- !u!114 &5324046410083775103
 MonoBehaviour:
@@ -125,7 +126,7 @@ Animator:
   m_GameObject: {fileID: 5324046410083775046}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
-  m_Controller: {fileID: 9100000, guid: 30534dfd8aae33344aa1c8ff7993f94c, type: 2}
+  m_Controller: {fileID: 22100000, guid: 413607fd63b953b49a2625cce2ea4cf7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
