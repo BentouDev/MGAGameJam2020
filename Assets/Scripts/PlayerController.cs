@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Transform rHand;
     public Transform rFoot;
     public Transform weapon;
+    public float damagerScale = 1.0f;
     public Health health;
 
     [Header("Hitreaction")]
@@ -317,7 +318,7 @@ public class PlayerController : MonoBehaviour
 
     public void SpecialAttackUpdate(AnimatorStateInfo stateInfo)
     {
-        if (stateInfo.normalizedTime > 0.5f)
+        if (stateInfo.normalizedTime > 0.95f)
         {
             specialAttackCanBlendOut = true;
         }
@@ -327,6 +328,7 @@ public class PlayerController : MonoBehaviour
         //Debug.Assert(weapon);
         damager = Instantiate(damagerPrefab, weapon);
         damager.GetComponent<DamagerLogic>().SetOwner(this);
+        damager.transform.localScale *= damagerScale;
 
         isWeaponAttacking = true;
         weaponAttackCanBlendOut = false;
@@ -341,7 +343,7 @@ public class PlayerController : MonoBehaviour
 
     public void WeaponAttackUpdate(AnimatorStateInfo stateInfo)
     {
-        if (stateInfo.normalizedTime > 0.4f)
+        if (stateInfo.normalizedTime > 0.95f)
         {
             weaponAttackCanBlendOut = true;
         }
@@ -366,7 +368,7 @@ public class PlayerController : MonoBehaviour
 
     public void PunchUpdate(AnimatorStateInfo stateInfo)
     {
-        if (stateInfo.normalizedTime > 0.4f)
+        if (stateInfo.normalizedTime > 0.2f)
         {
             punchCanBlendOut = true;
         }
@@ -391,7 +393,7 @@ public class PlayerController : MonoBehaviour
 
     public void KickUpdate(AnimatorStateInfo stateInfo)
     {
-        if (stateInfo.normalizedTime > 0.4f)
+        if (stateInfo.normalizedTime > 0.2f)
         {
             kickCanBlendOut = true;
         }
