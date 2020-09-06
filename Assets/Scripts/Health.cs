@@ -7,9 +7,14 @@ public class Health : MonoBehaviour
 {
     public RectTransform Parent;
     public Image HealthPanel;
+    public TMPro.TextMeshProUGUI HealthText;
 
     public float MaxHealth = 1000;
     private float CurrentHealth = 0;
+
+    public Color FullColor;
+    public Color NormalColor;
+    public Color LowColor;
 
     public void TakeDamage(float amount)
     {
@@ -38,6 +43,25 @@ public class Health : MonoBehaviour
         if (Parent && HealthPanel)
         {
             HealthPanel.fillAmount = CurrentHealth / MaxHealth;
+        }
+
+        if (CurrentHealth == MaxHealth)
+        {
+            HealthText.text = "LCL LEVEL MAX";
+            HealthText.color = FullColor;
+            HealthPanel.color = FullColor;
+        }
+        else if (CurrentHealth / MaxHealth > 0.3f)
+        {
+            HealthText.text = "LCL LEVEL NOMINAL";
+            HealthText.color = NormalColor;
+            HealthPanel.color = NormalColor;
+        }
+        else
+        {
+            HealthText.text = "LCL LEVEL LOW";
+            HealthText.color = LowColor;
+            HealthPanel.color = LowColor;
         }
     }
 }

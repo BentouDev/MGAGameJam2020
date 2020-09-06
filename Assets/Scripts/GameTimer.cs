@@ -7,11 +7,20 @@ public class GameTimer : MonoBehaviour
 {
     public TextMeshProUGUI Main;
     public TextMeshProUGUI Reminder;
+    public TextMeshProUGUI Divider;
+
+    public Color NormalColor;
+    public Color LateColor;
+
+    public float LateLimit = 10; 
 
     public float TimeLimit = 60;
 
     void Start()
     {
+        Main.color = NormalColor;
+        Reminder.color = NormalColor;
+        Divider.color = NormalColor;
     }
 
     public bool IsElapsed()
@@ -36,6 +45,13 @@ public class GameTimer : MonoBehaviour
 
             Main.text = string.Format("{0:00}", TimeLimit);
             Reminder.text = string.Format("{0:00}", reminder);
+        }
+
+        if (TimeLimit < LateLimit)
+        {
+            Main.color = LateColor;
+            Reminder.color = LateColor;
+            Divider.color = LateColor;
         }
     }
 }
