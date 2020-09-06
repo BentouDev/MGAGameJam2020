@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Transform rHand;
     public Transform rFoot;
+    public Transform weapon;
     public Health health;
 
     public Vector2 wantedMoveDir;
@@ -20,16 +21,19 @@ public class PlayerController : MonoBehaviour
     private bool wantsKick = false;
     private bool wantsHitReact = false;
     private bool wantsSpecialAttack = false;
+    private bool wantsWeaponAttack = false;
 
     private bool isPunching = false;
     private bool isKicking = false;
     private bool isHitReacting = false;
     private bool isSpecialAttacking = false;
+    private bool isWeaponAttacking = false;
 
     private bool punchCanBlendOut = false;
     private bool kickCanBlendOut = false;
     private bool hitReactionCanBlendOut = false;
     private bool specialAttackCanBlendOut = false;
+    private bool weaponAttackCanBlendOut = false;
 
     private bool wantsBlock = false;
 
@@ -120,6 +124,22 @@ public class PlayerController : MonoBehaviour
         }
 
         if (isSpecialAttacking && !specialAttackCanBlendOut)
+        {
+            return;
+        }
+
+        if (wantsWeaponAttack)
+        {
+            if (!isWeaponAttacking)
+            {
+                animator.SetTrigger("ToWeaponAttack");
+            }
+
+            wantsWeaponAttack = false;
+            return;
+        }
+
+        if (isWeaponAttacking && !weaponAttackCanBlendOut)
         {
             return;
         }
@@ -221,6 +241,13 @@ public class PlayerController : MonoBehaviour
             wantsSpecialAttack = true;
         }
     }
+    public void OnWeaponAttack(InputValue value)
+    {
+        if (value.Get<float>() > 0.0f)
+        {
+            wantsWeaponAttack = true;
+        }
+    }
 
     public void OnBlock(InputValue value)
     {
@@ -284,9 +311,33 @@ public class PlayerController : MonoBehaviour
 
     public void SpecialAttackUpdate(AnimatorStateInfo stateInfo)
     {
-        if (stateInfo.normalizedTime > 0.8f)
+        if (stateInfo.normalizedTime > 0.5f)
         {
             specialAttackCanBlendOut = true;
+        }
+    }
+    public void WeaponAttackBegin()
+    {
+        //Debug.Assert(weapon);
+        damager = Instantiate(damagerPrefab, weapon);
+        damager.GetComponent<DamagerLogic>().SetOwner(this);
+
+        isWeaponAttacking = true;
+        weaponAttackCanBlendOut = false;
+    }
+
+    public void WeaponAttackEnd()
+    {
+        Destroy(damager);
+
+        isWeaponAttacking = false;
+    }
+
+    public void WeaponAttackUpdate(AnimatorStateInfo stateInfo)
+    {
+        if (stateInfo.normalizedTime > 0.4f)
+        {
+            weaponAttackCanBlendOut = true;
         }
     }
 
@@ -309,7 +360,7 @@ public class PlayerController : MonoBehaviour
 
     public void PunchUpdate(AnimatorStateInfo stateInfo)
     {
-        if (stateInfo.normalizedTime > 0.8f)
+        if (stateInfo.normalizedTime > 0.4f)
         {
             punchCanBlendOut = true;
         }
@@ -334,7 +385,7 @@ public class PlayerController : MonoBehaviour
 
     public void KickUpdate(AnimatorStateInfo stateInfo)
     {
-        if (stateInfo.normalizedTime > 0.8f)
+        if (stateInfo.normalizedTime > 0.4f)
         {
             kickCanBlendOut = true;
         }
