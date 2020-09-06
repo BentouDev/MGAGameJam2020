@@ -80,7 +80,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 860719376871397500}
   speed: 300
+  rHand: {fileID: 5044444052223032024}
+  rFoot: {fileID: 8123362996447531857}
   wantedMoveDir: {x: 0, y: 0}
+  damagerPrefab: {fileID: 7980693458492477890, guid: e5674d1436620eb44ba79b76f8e11b83, type: 3}
 --- !u!114 &5324046410083775103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,5 +198,15 @@ PrefabInstance:
 --- !u!4 &6008021771489241995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: abf06fae43f28f04ba9132376003912f, type: 3}
+  m_PrefabInstance: {fileID: 6118842154955607136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8123362996447531857 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6606352813371007183, guid: abf06fae43f28f04ba9132376003912f, type: 3}
+  m_PrefabInstance: {fileID: 6118842154955607136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5044444052223032024 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7860178112506136904, guid: abf06fae43f28f04ba9132376003912f, type: 3}
   m_PrefabInstance: {fileID: 6118842154955607136}
   m_PrefabAsset: {fileID: 0}
