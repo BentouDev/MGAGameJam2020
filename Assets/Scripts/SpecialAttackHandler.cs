@@ -8,6 +8,7 @@ public class SpecialAttackHandler : MonoBehaviour
     public List<Transform> Bombs = new List<Transform>();
     public float BombScale;
     public Vector3 BombOffset;
+    public float BombSpawnDelay = 1.0f;
 
     public bool DeactivateInsteadOfScale;
 
@@ -36,6 +37,15 @@ public class SpecialAttackHandler : MonoBehaviour
             else
                 bomb.transform.localScale = Vector3.zero;
         }
+
+        StartCoroutine(CoSpawnDelay());
+    }
+
+    IEnumerator CoSpawnDelay()
+    {
+        yield return new WaitForSeconds(BombSpawnDelay);
+
+        SpawnBomb(string.Empty);
     }
 
     public void SpawnBomb(string dummy)

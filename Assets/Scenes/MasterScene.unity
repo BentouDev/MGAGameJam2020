@@ -6525,6 +6525,7 @@ MonoBehaviour:
   - {fileID: 135764239}
   BombScale: 1
   BombOffset: {x: 0, y: 0, z: 0}
+  BombSpawnDelay: 0.25
   DeactivateInsteadOfScale: 0
 --- !u!1 &1619551073
 GameObject:
@@ -7223,6 +7224,7 @@ MonoBehaviour:
   - {fileID: 792184883}
   BombScale: 1
   BombOffset: {x: 0, y: 0, z: 0}
+  BombSpawnDelay: 0.25
   DeactivateInsteadOfScale: 0
 --- !u!1001 &1943530084
 PrefabInstance:

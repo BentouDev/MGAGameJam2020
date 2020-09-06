@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lifetime: 2
   Speed: 10
+  Damage: 100
+  Owner: {fileID: 0}
 --- !u!135 &1035356245746399941
 SphereCollider:
   m_ObjectHideFlags: 0
