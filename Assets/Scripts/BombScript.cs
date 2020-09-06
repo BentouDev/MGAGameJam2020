@@ -37,6 +37,7 @@ public class BombScript : MonoBehaviour
         if (controller && controller != Owner)
         {
             controller.health.TakeDamage(Damage);
+            controller.OnHit();
             Destroy(gameObject);
         }
     }
