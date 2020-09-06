@@ -6,6 +6,9 @@ ModelImporter:
   - first:
       74: 7903882579884843290
     second: sword_attack
+  - first:
+      74: 3202343379433381150
+    second: sword_attack_00
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -88,7 +91,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.099999994
+    globalScale: 10
     rootMotionBoneName: Root
     hasTranslationDoF: 0
     hasExtraRoot: 0
