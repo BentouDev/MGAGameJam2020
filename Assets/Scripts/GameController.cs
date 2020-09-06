@@ -49,18 +49,15 @@ public class GameController : MonoBehaviour
         {
             GameEndDraw();
         }
-
-        if (!Player1.health.IsAlive())
+        else if (!Player1.health.IsAlive())
         {
             GameEnd(Player1, Player2);
         }
-
-        if (!Player2.health.IsAlive())
+        else if (!Player2.health.IsAlive())
         {
             GameEnd(Player2, Player1);
         }
-
-        if (Timeer.IsElapsed())
+        else if (Timeer.IsElapsed())
         {
             GameEndTimeup();
         }
@@ -92,6 +89,7 @@ public class GameController : MonoBehaviour
 
     void ShowEndMenu(string message)
     {
+        Timeer.StopTimer();
         Timeer.GetComponent<Animator>().SetTrigger("OnHideMenu");
         EndMenu.gameObject.SetActive(true);
         EndMenu.GetComponent<Animator>().SetTrigger("OnShowMenu");

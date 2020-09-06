@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Transform rHand;
     public Transform rFoot;
+    public Health health;
 
     public Vector2 wantedMoveDir;
 
@@ -58,10 +59,12 @@ public class PlayerController : MonoBehaviour
             if (blockState == EBlockState.Active)
             {
                 animator.SetTrigger("ToBlockHitReaction");
+                health.TakeDamage(10);
             }
             else
             {
                 animator.SetTrigger("ToHitReaction");
+                health.TakeDamage(100);
             }
 
             wantsHitReact = false;

@@ -16,6 +16,8 @@ public class GameTimer : MonoBehaviour
 
     public float TimeLimit = 60;
 
+    private bool Stopped = false;
+
     void Start()
     {
         Main.color = NormalColor;
@@ -29,8 +31,17 @@ public class GameTimer : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    public void StopTimer()
+    {
+        Stopped = true;
+    }
+
     void Update()
     {
+        if (Stopped)
+            return;
+
         TimeLimit -= Time.deltaTime;
 
         if (TimeLimit < 0.0f)
