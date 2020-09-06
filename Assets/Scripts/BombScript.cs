@@ -7,6 +7,10 @@ public class BombScript : MonoBehaviour
     public float Lifetime = 2.0f;
     public float Speed = 1.0f;
 
+    public float Damage = 200;
+
+    public PlayerController Owner;
+
     private float SpawnTime;
 
     // Start is called before the first frame update
@@ -29,10 +33,12 @@ public class BombScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        var health = other.GetComponent<Health>();
-        if (health)
+        var controller = other.GetComponent<PlayerController>();
+        if (controller && controller != Owner)
         {
-            health.TakeDamage(200);
+            controller.health.TakeDamage(Damage);
+            controller.OnHit();
+            Destroy(gameObject);
         }
     }
 }
