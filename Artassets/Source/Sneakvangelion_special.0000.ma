@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
-//Name: Sneakvangelion.0000.ma
-//Last modified: Sun, Sep 06, 2020 11:17:09 AM
+//Name: Sneakvangelion_special.0000.ma
+//Last modified: Sun, Sep 06, 2020 11:17:15 AM
 //Codeset: 1250
 requires maya "2018ff09";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -41936,4 +41936,4 @@ connectAttr "Cylinder_002.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "Cylinder_003.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "SwordShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of Sneakvangelion.0000.ma
+// End of Sneakvangelion_special.0000.ma
