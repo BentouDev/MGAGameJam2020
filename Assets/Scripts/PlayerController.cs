@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public float damagerScale = 1.0f;
     public Health health;
 
+    public GameObject HitreactionPrefab;
+
     public Vector2 wantedMoveDir;
 
     public bool IsMirrored;
@@ -398,5 +400,6 @@ public class PlayerController : MonoBehaviour
     public void OnHit()
     {
         wantsHitReact = true;
+        Instantiate(HitreactionPrefab, transform);
     }
 }

@@ -530,6 +530,10 @@ PrefabInstance:
       propertyPath: IsMirrored
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5324046410083775045, guid: 652a7401c6c15b8449d9fab0a3f1f369, type: 3}
+      propertyPath: HitreactionPrefab
+      value: 
+      objectReference: {fileID: 2137970234840767632, guid: a50cb0a5ced9a0a4192a60786bcdb125, type: 3}
     - target: {fileID: 5324046410083775046, guid: 652a7401c6c15b8449d9fab0a3f1f369, type: 3}
       propertyPath: m_Name
       value: Sneakvangelion
@@ -6340,6 +6344,10 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 1619551074}
+    - target: {fileID: 5324046410083775045, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: HitreactionPrefab
+      value: 
+      objectReference: {fileID: 2137970234840767632, guid: a50cb0a5ced9a0a4192a60786bcdb125, type: 3}
     - target: {fileID: 5324046410083775046, guid: 807d7823dc542c947a921ead3a404777, type: 3}
       propertyPath: m_Name
       value: Fatvangelion
