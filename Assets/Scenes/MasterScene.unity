@@ -830,6 +830,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7913691842003827222, guid: 652a7401c6c15b8449d9fab0a3f1f369, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33cdd67365dcadf46abf71e6b4e237d2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 652a7401c6c15b8449d9fab0a3f1f369, type: 3}
 --- !u!1 &650760395
@@ -863,6 +867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timeer: {fileID: 1807067563}
+  RoundsToWon: 2
   Player1:
     name: Sneakvangelion
     health: {fileID: 965342537}
@@ -1157,7 +1162,7 @@ Transform:
   m_GameObject: {fileID: 870511128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 40, y: 1, z: 40}
+  m_LocalScale: {x: 78.004, y: 1, z: 40}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -6968,6 +6973,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4044478255453128029, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33cdd67365dcadf46abf71e6b4e237d2, type: 2}
     - target: {fileID: 5324046410083775045, guid: 807d7823dc542c947a921ead3a404777, type: 3}
       propertyPath: health
       value: 
