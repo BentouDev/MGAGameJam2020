@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
     "../../specials_01/weapon_attack_01.anim": {}, 
     "../../movement/walk_backward_00.anim": {}, 
     "../../Trash/hit_react_00.anim": {}, 
@@ -21,4 +22,29 @@
     "../../Trash/idle_00.anim": {}, 
     "../../movement": {}, 
     "../../motion/block_out_00.anim": {}
+=======
+    "../../motion/block_00.anim": {}, 
+    "../../specials_01/torpedo_in_face_01.anim": {}, 
+    "../../motion/hit_react_00.anim": {}, 
+    "../../idles/Idle_00.anim": {}, 
+    "../../Trash/hit_react_00.anim": {}, 
+    "../../attacks/kick_00.anim": {}, 
+    "../../idles": {}, 
+    "../../Trash/punch_00.anim": {}, 
+    "../../specials_01/torpedo_attack_01.anim": {}, 
+    "../../movement/walk_forward_00.anim": {}, 
+    "../../motion/block_loop_00.anim": {}, 
+    "../../movement/walk_backward_00.anim": {}, 
+    "../../motion": {}, 
+    "../../Trash/idle_00.anim": {}, 
+    "../../motion/block_out_00.anim": {}, 
+    "../../specials_01/weapon_attack_01.anim": {}, 
+    "../../movement": {}, 
+    "../../motion/block_hit_00.anim": {}, 
+    "../../Trash/kick_00 (2).anim": {}, 
+    "../../Trash/punch_00 (2).anim": {}, 
+    "../../attacks": {}, 
+    "../../specials_01": {}, 
+    "../../attacks/punch_00.anim": {}
+>>>>>>> Stashed changes
 }
