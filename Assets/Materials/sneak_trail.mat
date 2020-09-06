@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: efekty_kurka
+  m_Name: sneak_trail
   m_Shader: {fileID: -6465566751694194690, guid: 92ed5f7867287264582343bb3f83aa51, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -84,6 +84,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_2E278F3D: {r: 63.999992, g: 6.031413, b: 6.031413, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
