@@ -368,7 +368,7 @@ public class PlayerController : MonoBehaviour
 
     public void PunchUpdate(AnimatorStateInfo stateInfo)
     {
-        if (stateInfo.normalizedTime > 0.2f)
+        if (stateInfo.normalizedTime > 0.5f)
         {
             punchCanBlendOut = true;
         }
