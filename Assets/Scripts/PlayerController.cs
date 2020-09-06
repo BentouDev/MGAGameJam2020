@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     public Vector2 wantedMoveDir;
 
+    public bool IsMirrored;
+
     private bool wantsPunch = false;
     private bool wantsKick = false;
     private bool wantsHitReact = false;
@@ -46,6 +48,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        animator.SetBool("IsMirrored", IsMirrored);
 
         blockState = EBlockState.None;
         damager = null;
