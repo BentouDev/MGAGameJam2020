@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8679734566623468517}
   - component: {fileID: 148965451396374152}
   - component: {fileID: 252296959036032886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DamagerSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
