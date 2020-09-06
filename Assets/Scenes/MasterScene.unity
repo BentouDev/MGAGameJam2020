@@ -806,6 +806,10 @@ PrefabInstance:
       propertyPath: IsMirrored
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5324046410083775045, guid: 652a7401c6c15b8449d9fab0a3f1f369, type: 3}
+      propertyPath: HitreactionPrefab
+      value: 
+      objectReference: {fileID: 2137970234840767632, guid: a50cb0a5ced9a0a4192a60786bcdb125, type: 3}
     - target: {fileID: 5324046410083775046, guid: 652a7401c6c15b8449d9fab0a3f1f369, type: 3}
       propertyPath: m_Name
       value: Sneakvangelion
@@ -7099,6 +7103,10 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 1619551074}
+    - target: {fileID: 5324046410083775045, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: HitreactionPrefab
+      value: 
+      objectReference: {fileID: 2137970234840767632, guid: a50cb0a5ced9a0a4192a60786bcdb125, type: 3}
     - target: {fileID: 5324046410083775046, guid: 807d7823dc542c947a921ead3a404777, type: 3}
       propertyPath: m_Name
       value: Fatvangelion
@@ -7441,6 +7449,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 558396332031485192, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: 1374657707721663745, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: 1526519550737353519, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: 2948131195505812318, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: 3220448738533135733, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: 3799625233298850083, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: 4056390833649441643, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: 4267211798826467442, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: 4370752435934070832, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: 5324046410083775045, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 1619551074}
+    - target: {fileID: 5324046410083775045, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: HitreactionPrefab
+      value: 
+      objectReference: {fileID: 2137970234840767632, guid: a50cb0a5ced9a0a4192a60786bcdb125, type: 3}
+    - target: {fileID: 5324046410083775046, guid: 807d7823dc542c947a921ead3a404777, type: 3}
+      propertyPath: 
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6a2e4435fd7c08843b1a7c770a1c0b08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.78
