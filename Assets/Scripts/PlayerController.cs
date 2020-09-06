@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class PlayerController : MonoBehaviour
     public Transform weapon;
     public Health health;
 
+    [Header("Hitreaction")]
     public GameObject HitreactionPrefab;
+
+    public UnityEvent OnHitCallback;
 
     public Vector2 wantedMoveDir;
 
@@ -399,5 +403,6 @@ public class PlayerController : MonoBehaviour
     {
         wantsHitReact = true;
         Instantiate(HitreactionPrefab, transform);
+        OnHitCallback.Invoke();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpecialAttackHandler : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class SpecialAttackHandler : MonoBehaviour
     public bool DeactivateInsteadOfScale;
 
     private bool IsDuringSpecial = false;
+
+    public UnityEvent OnSpecialStarted;
 
     public void DetachBomb(string dummy)
     {
@@ -37,6 +40,8 @@ public class SpecialAttackHandler : MonoBehaviour
             else
                 bomb.transform.localScale = Vector3.zero;
         }
+
+        OnSpecialStarted.Invoke();
 
         StartCoroutine(CoSpawnDelay());
     }
