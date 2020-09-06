@@ -266,11 +266,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7153515220620453537, guid: 807d7823dc542c947a921ead3a404777, type: 3}
   m_PrefabInstance: {fileID: 1921906899}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &135764239 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5854144631714448008, guid: 652a7401c6c15b8449d9fab0a3f1f369, type: 3}
-  m_PrefabInstance: {fileID: 612230652}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &147754462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6431,6 +6426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3621fc3662a3bbd48aa49a2ad7a6c33f, type: 3}
+--- !u!4 &1371328268 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5758521403747807391, guid: 652a7401c6c15b8449d9fab0a3f1f369, type: 3}
+  m_PrefabInstance: {fileID: 612230652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1391109136
 GameObject:
   m_ObjectHideFlags: 0
@@ -6522,7 +6522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BombPrefab: {fileID: 101141433103925871, guid: 49c963ea20a472d48bcb67e28eeed4ef, type: 3}
   Bombs:
-  - {fileID: 135764239}
+  - {fileID: 1371328268}
   BombScale: 1
   BombOffset: {x: 0, y: 0, z: 0}
   DeactivateInsteadOfScale: 0
