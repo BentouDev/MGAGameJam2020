@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public class Results
+    {
+        public int Player1_Points;
+        public int Player2_Points;
+    }
+
+    public static Results DataSet;
+
     [System.Serializable]
     public struct PlayerData
     {
@@ -15,6 +23,7 @@ public class GameController : MonoBehaviour
     }
 
     public GameTimer Timeer;
+    public int RoundsToWon = 2;
 
     [Header("Players")]
     public PlayerData Player1;
@@ -52,10 +61,12 @@ public class GameController : MonoBehaviour
         else if (!Player1.health.IsAlive())
         {
             GameEnd(Player1, Player2);
+            DataSet.Player2_Points++;
         }
         else if (!Player2.health.IsAlive())
         {
             GameEnd(Player2, Player1);
+            DataSet.Player1_Points++;
         }
         else if (Timeer.IsElapsed())
         {
