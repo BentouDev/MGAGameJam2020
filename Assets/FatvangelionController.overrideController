@@ -10,7 +10,7 @@ AnimatorOverrideController:
   m_Controller: {fileID: 9100000, guid: 30534dfd8aae33344aa1c8ff7993f94c, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: -4904124750191556010, guid: 7ef554f28379f574daf2319cee8e2142, type: 3}
-    m_OverrideClip: {fileID: 2574396675890979007, guid: 6e7e5dc3a68852d4b9bfe0506ccc76d0, type: 3}
+    m_OverrideClip: {fileID: 2574396675890979007, guid: 7f0b498bba212d447a6122e5f5915ca5, type: 3}
   - m_OriginalClip: {fileID: 2574396675890979007, guid: 6e7e5dc3a68852d4b9bfe0506ccc76d0, type: 3}
     m_OverrideClip: {fileID: 2574396675890979007, guid: 6e7e5dc3a68852d4b9bfe0506ccc76d0, type: 3}
   - m_OriginalClip: {fileID: -7704616115237747175, guid: a034e3f3f9a21e94384c1bed9d3a72e2, type: 3}
@@ -24,11 +24,9 @@ AnimatorOverrideController:
   - m_OriginalClip: {fileID: -5668826277359358975, guid: c50a54b06c65cd14fab36a3ae7c8db24, type: 3}
     m_OverrideClip: {fileID: 1167355656394099732, guid: 8611db629f2420244bdcec6b9c8e3e1b, type: 3}
   - m_OriginalClip: {fileID: 1167355656394099732, guid: 8611db629f2420244bdcec6b9c8e3e1b, type: 3}
-    m_OverrideClip: {fileID: 1167355656394099732, guid: 8611db629f2420244bdcec6b9c8e3e1b, type: 3}
-  - m_OriginalClip: {fileID: 9053549193223167560, guid: 337dfd2ccb57ea1428f10a864aaf5977, type: 3}
-    m_OverrideClip: {fileID: 2512568891565541922, guid: 2f52d87083f6e644f8bc92a4e1f103e5, type: 3}
+    m_OverrideClip: {fileID: 1167355656394099732, guid: 34e48ca64d950f64fa38cd8a388e4d47, type: 3}
   - m_OriginalClip: {fileID: 2512568891565541922, guid: 2f52d87083f6e644f8bc92a4e1f103e5, type: 3}
-    m_OverrideClip: {fileID: 2512568891565541922, guid: 2f52d87083f6e644f8bc92a4e1f103e5, type: 3}
+    m_OverrideClip: {fileID: 2512568891565541922, guid: d07550e1cf8e8744698607fe359cdf1e, type: 3}
   - m_OriginalClip: {fileID: -7255780916406201827, guid: 0cf26ca6ec1d75542911a40ba131fa19, type: 3}
     m_OverrideClip: {fileID: -6890028159969460004, guid: 39244abbc3e9c81468693bc3af1e1fed, type: 3}
   - m_OriginalClip: {fileID: -6890028159969460004, guid: 39244abbc3e9c81468693bc3af1e1fed, type: 3}
