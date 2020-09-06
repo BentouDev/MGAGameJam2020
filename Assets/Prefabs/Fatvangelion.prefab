@@ -82,6 +82,8 @@ MonoBehaviour:
   speed: 300
   rHand: {fileID: 1185418929543620269}
   rFoot: {fileID: 6502265666874622}
+  weapon: {fileID: 8926305469355276638}
+  damagerScale: 4
   health: {fileID: 0}
   wantedMoveDir: {x: 0, y: 0}
   IsMirrored: 0
@@ -210,5 +212,10 @@ Transform:
 --- !u!4 &1185418929543620269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7860178112506136904, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
+  m_PrefabInstance: {fileID: 187037487225229333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8926305469355276638 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8752998889771100491, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
   m_PrefabInstance: {fileID: 187037487225229333}
   m_PrefabAsset: {fileID: 0}
