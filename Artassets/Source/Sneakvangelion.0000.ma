@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Sneakvangelion.0000.ma
-//Last modified: Sun, Sep 06, 2020 11:14:34 AM
+//Last modified: Sun, Sep 06, 2020 11:17:09 AM
 //Codeset: 1250
 requires maya "2018ff09";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -20,15 +20,15 @@ fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
 createNode transform -s -n "persp";
 	rename -uid "063B9EAF-4765-FDB3-3E0D-1CBF02EFE69C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -194.42795410173795 45.122319670766345 222.87779770730663 ;
-	setAttr ".r" -type "double3" -15.338352728396853 -98.200000000000912 0 ;
+	setAttr ".t" -type "double3" -167.00695641495918 39.82134363771371 282.75219050623457 ;
+	setAttr ".r" -type "double3" -15.938352728396621 -78.600000000000804 -8.0456275374421321e-15 ;
 	setAttr ".rp" -type "double3" -1.8747406083317825e-15 -2.6906807906382686e-15 0 ;
 	setAttr ".rpt" -type "double3" -1.2416261962442573e-13 53.918418325344021 -237.47003288042168 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F3581CD1-44F7-9D80-8105-CA91802ADC09";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 198.18396594645517;
+	setAttr ".coi" 171.60187906011308;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";

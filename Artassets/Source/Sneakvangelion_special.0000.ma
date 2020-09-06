@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Sneakvangelion_special.0000.ma
-//Last modified: Sun, Sep 06, 2020 11:15:27 AM
+//Last modified: Sun, Sep 06, 2020 11:17:15 AM
 //Codeset: 1250
 requires maya "2018ff09";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
