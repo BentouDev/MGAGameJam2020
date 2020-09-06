@@ -1,14 +1,11 @@
 fileFormatVersion: 2
-guid: e14814dd0c1fc5c4aa1c58ab5b59b455
+guid: 380b3ba9fd0cb64479fac81dac8776c2
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: 7903882579884843290
     second: sword_attack
-  - first:
-      74: 3202343379433381150
-    second: sword_attack_00
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -40,15 +37,15 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -91,16 +88,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 10
-    rootMotionBoneName: Root
+    globalScale: 1
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 03a310158f9eba14eb4e140b0a652a6c, type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 2
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
