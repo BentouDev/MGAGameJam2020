@@ -15,6 +15,7 @@ public class Health : MonoBehaviour
     public Color FullColor;
     public Color NormalColor;
     public Color LowColor;
+    public Color CriticalColor;
 
     public void TakeDamage(float amount)
     {
@@ -40,9 +41,13 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Parent && HealthPanel)
+        if (HealthPanel)
         {
             HealthPanel.fillAmount = CurrentHealth / MaxHealth;
+        }
+        else
+        {
+            return;
         }
 
         if (CurrentHealth == MaxHealth)
@@ -51,17 +56,23 @@ public class Health : MonoBehaviour
             HealthText.color = FullColor;
             HealthPanel.color = FullColor;
         }
-        else if (CurrentHealth / MaxHealth > 0.3f)
+        else if (CurrentHealth / MaxHealth > 0.7f)
         {
             HealthText.text = "LCL LEVEL NOMINAL";
             HealthText.color = NormalColor;
             HealthPanel.color = NormalColor;
         }
-        else
+        else if (CurrentHealth / MaxHealth > 0.3f)
         {
             HealthText.text = "LCL LEVEL LOW";
             HealthText.color = LowColor;
             HealthPanel.color = LowColor;
+        }
+        else
+        {
+            HealthText.text = "LCL LEVEL CRITICAL";
+            HealthText.color = CriticalColor;
+            HealthPanel.color = CriticalColor;
         }
     }
 }
