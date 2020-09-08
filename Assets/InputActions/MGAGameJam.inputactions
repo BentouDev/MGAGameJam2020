@@ -212,21 +212,10 @@
                 {
                     "name": "",
                     "id": "be454438-a282-458d-bb0f-7a820c5a72a1",
-                    "path": "<DualShockGamepad>/rightShoulder",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Special",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6951e60f-e71c-489c-9ae3-f317cbbf7fe8",
-                    "path": "<XInputController>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
                     "action": "Special",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -267,21 +256,10 @@
                 {
                     "name": "",
                     "id": "6e1861bf-9753-4128-ae07-e007631c808f",
-                    "path": "<DualShockGamepad>/leftShoulder",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "WeaponAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4a5ef320-0b09-4efb-aaaf-ab8cc1c0b6f3",
-                    "path": "<XInputController>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
                     "action": "WeaponAttack",
                     "isComposite": false,
                     "isPartOfComposite": false

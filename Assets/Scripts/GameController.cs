@@ -3,27 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameController : MonoBehaviour
 {
-    public class Results
-    {
-        public int Player1_Points;
-        public int Player2_Points;
-    }
-
-    public static Results DataSet;
+    public PersistentGameState GameState;
 
     [System.Serializable]
     public struct PlayerData
     {
         public string name;
         public Health health;
+        public Transform SpawnPoint;
         public PlayerController controller;
+        public PlayerInput input;
+        public Health HealthController;
     }
 
     public GameTimer Timeer;
     public int RoundsToWon = 2;
+
+    [Header("Player Controller Setup")]
+    public ControllerSetup Setup;
+    public GameObject PlayerControllerPrefab;
+    public InputActionAsset Actions;
 
     [Header("Players")]
     public PlayerData Player1;
@@ -36,13 +39,65 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameState = FindObjectOfType<PersistentGameState>();
+
         Timeer.Main.text = string.Format("{0:00}", Timeer.TimeLimit);
 
         EndMenu.gameObject.SetActive(false);
-        Player1.controller.enabled = false;
-        Player2.controller.enabled = false;
+        //Player1.controller.enabled = false;
+        //Player2.controller.enabled = false;
         Timeer.enabled = false;
 
+        if (GameState.ShowControllerSetup && Setup)
+        {
+            Setup.BeginControllerSetup(this);
+            fade_color = 0.0f;
+        }
+        else
+        {
+            BeginGameRound();
+        }
+    }
+
+    PlayerInput SpawnPlayerInput(InputDevice device)
+    {
+        string schemeName = string.Empty;
+
+        foreach (InputControlScheme scheme in Actions.controlSchemes)
+        {
+            if (scheme.SupportsDevice(device))
+            {
+                schemeName = scheme.name;
+                Debug.Log($"Selected '{schemeName}' scheme for device '{device}'!");
+                break;
+            }
+        }
+
+        return PlayerInput.Instantiate(PlayerControllerPrefab, -1, schemeName, -1, device);
+    }
+
+    public void FinishControllerSetup(InputDevice leftDevice, InputDevice rightDevice)
+    {
+        fade_color = 1.0f;
+
+        Player1.input = SpawnPlayerInput(leftDevice);
+        Player2.input = SpawnPlayerInput(rightDevice);
+
+        Player1.controller = Player1.input.GetComponent<PlayerController>();
+        Player2.controller = Player2.input.GetComponent<PlayerController>();
+
+        bool success1 = Player1.controller.Initialize(Instantiate(GameState.Player1.PawnPrefab, Player1.SpawnPoint.position, Player1.SpawnPoint.rotation).transform, Player1.HealthController);
+        Debug.Assert(success1, "Player1 setup failed!");
+
+        bool success2 = Player2.controller.Initialize(Instantiate(GameState.Player2.PawnPrefab, Player2.SpawnPoint.position, Player2.SpawnPoint.rotation).transform, Player2.HealthController);
+        Debug.Assert(success2, "Player2 setup failed!");
+
+        if (success1 && success2)
+            BeginGameRound();
+    }
+
+    public void BeginGameRound()
+    {
         StartCoroutine(CoFade(1.0f, 0.0f, () =>
         {
             Player1.controller.enabled = true;
@@ -61,12 +116,12 @@ public class GameController : MonoBehaviour
         else if (!Player1.health.IsAlive())
         {
             GameEnd(Player1, Player2);
-            DataSet.Player2_Points++;
+            GameState.Player2.Points++;
         }
         else if (!Player2.health.IsAlive())
         {
             GameEnd(Player2, Player1);
-            DataSet.Player1_Points++;
+            GameState.Player1.Points++;
         }
         else if (Timeer.IsElapsed())
         {

@@ -6,23 +6,27 @@ using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody rb;
+    public Rigidbody rb;
     public Animator animator;
     public float speed;
     public Transform rHand;
     public Transform rFoot;
     public Transform weapon;
     public float damagerScale = 1.0f;
-    public Health health;
+
+    public GameObject damagerPrefab;
+    private GameObject damager;
+
+    public Vector2 wantedMoveDir;
 
     [Header("Hitreaction")]
     public GameObject HitreactionPrefab;
 
-    public UnityEvent OnHitCallback;
+    [HideInInspector]
+    public Pawn Pawn;
 
-    public Vector2 wantedMoveDir;
-
-    public bool IsMirrored;
+    [HideInInspector]
+    public Health health;
 
     private bool wantsPunch = false;
     private bool wantsKick = false;
@@ -53,18 +57,51 @@ public class PlayerController : MonoBehaviour
     }
     private EBlockState blockState;
 
-    public GameObject damagerPrefab;
-    private GameObject damager;
-
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
-        animator.SetBool("IsMirrored", IsMirrored);
+        // TO REMOVE
+        //Pawn = transform;
+        //rb = Pawn.GetComponent<Rigidbody>();
+        // TO REMOVE
 
         blockState = EBlockState.None;
         damager = null;
     }
+
+    public bool Initialize(Transform pawn, Health health)
+    {
+        bool succ = true;
+
+        var co_pawn = pawn.GetComponent<Pawn>();
+        Debug.Assert(co_pawn, "Missing 'Pawn' component on character gameobject!", pawn);
+        if (!co_pawn)
+            return false;
+
+        succ &= co_pawn.Initialize();
+
+        rb = co_pawn.Body;
+        succ &= rb != null;
+        Debug.Assert(co_pawn, "Missing 'Rigidbody' reference on 'Pawn' component!", pawn);
+
+        animator = co_pawn.Anim;
+        succ &= animator != null;
+        Debug.Assert(co_pawn, "Missing 'Animator' reference on 'Pawn' component!", pawn);
+
+        if (succ)
+        {
+            Pawn = co_pawn;
+            pawn.gameObject.SetActive(true);
+
+            rHand = Pawn.Bone_rHand.Get();
+            rFoot = Pawn.Bone_rFoot.Get();
+            weapon = Pawn.Bone_weapon.Get();
+
+            this.health = health;
+        }
+
+        return succ;
+    }
+
     void Update()
     {
         if (wantsHitReact)
@@ -195,7 +232,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Vector3 local_dir = transform.InverseTransformDirection(new Vector3(wantedMoveDir.x, 0.0f, 0.0f));
+            Vector3 local_dir = Pawn.transform.InverseTransformDirection(new Vector3(wantedMoveDir.x, 0.0f, 0.0f));
 
             if (local_dir.z > 0.0f)
             {
@@ -404,7 +441,7 @@ public class PlayerController : MonoBehaviour
     public void OnHit()
     {
         wantsHitReact = true;
-        Instantiate(HitreactionPrefab, transform);
-        OnHitCallback.Invoke();
+        Instantiate(HitreactionPrefab, Pawn.transform);
+        Pawn.OnHitCallback.Invoke();
     }
 }

@@ -13,7 +13,7 @@ public class DamagerLogic : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        PlayerController victim = collider.gameObject.GetComponent<PlayerController>();
+        PlayerController victim = Pawn.FindPlayerController(collider.gameObject);
         if (victim == null)
         {
             Debug.DebugBreak();

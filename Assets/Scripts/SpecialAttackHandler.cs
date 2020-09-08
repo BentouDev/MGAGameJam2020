@@ -33,7 +33,7 @@ public class SpecialAttackHandler : MonoBehaviour
             newBomb.transform.forward = transform.forward;
             //newBomb.transform.rotation = bomb.transform.rotation;
 
-            newBomb.GetComponent<BombScript>().Owner = GetComponent<PlayerController>();
+            newBomb.GetComponent<BombScript>().Owner = Pawn.FindPlayerController(gameObject);
 
             if (DeactivateInsteadOfScale)
                 bomb.gameObject.SetActive(false);

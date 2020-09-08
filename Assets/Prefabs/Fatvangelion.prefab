@@ -265,10 +265,9 @@ GameObject:
   - component: {fileID: 5324046410083775096}
   - component: {fileID: 5324046410083775099}
   - component: {fileID: 5324046410083775044}
-  - component: {fileID: 5324046410083775045}
-  - component: {fileID: 5324046410083775103}
   - component: {fileID: 860719376871397500}
   - component: {fileID: 1928567458}
+  - component: {fileID: 1921906904}
   m_Layer: 0
   m_Name: Fatvangelion
   m_TagString: Untagged
@@ -323,74 +322,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &5324046410083775045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5324046410083775046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d25c5fd760c3849a4bcf7853113df4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 860719376871397500}
-  speed: 800
-  rHand: {fileID: 1185418929543620269}
-  rFoot: {fileID: 6502265666874622}
-  weapon: {fileID: 8926305469355276638}
-  damagerScale: 4
-  health: {fileID: 0}
-  HitreactionPrefab: {fileID: 2137970234840767632, guid: a50cb0a5ced9a0a4192a60786bcdb125, type: 3}
-  OnHitCallback:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4252094304291594323}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  wantedMoveDir: {x: 0, y: 0}
-  IsMirrored: 0
-  damagerPrefab: {fileID: 7980693458492477890, guid: e5674d1436620eb44ba79b76f8e11b83, type: 3}
---- !u!114 &5324046410083775103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5324046410083775046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 0831ed696a5f2b64282f5213de4e095c, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!95 &860719376871397500
 Animator:
   serializedVersion: 3
@@ -438,6 +369,41 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 870736487}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1921906904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324046410083775046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7dc3a1cbb9d984fa9a61c3d11e0878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Anim: {fileID: 860719376871397500}
+  Body: {fileID: 5324046410083775044}
+  Bone_rHand:
+    BoneName: R_Hand_1
+  Bone_rFoot:
+    BoneName: R_Foot_1
+  Bone_weapon:
+    BoneName: TwoHanded_Weapon
+  OnHitCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4252094304291594323}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -516,6 +482,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f0714c92ab1447145ab268f6d4e3431f, type: 2}
+    - target: {fileID: -4992061988752419512, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33cdd67365dcadf46abf71e6b4e237d2, type: 2}
     - target: {fileID: -4742160990043645915, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -580,16 +550,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
   m_PrefabInstance: {fileID: 187037487225229333}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6502265666874622 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -9038895579820524309, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
-  m_PrefabInstance: {fileID: 187037487225229333}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1185418929543620269 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7860178112506136904, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
-  m_PrefabInstance: {fileID: 187037487225229333}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7153515220620453537 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7052102291923629748, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
@@ -618,10 +578,5 @@ Transform:
 --- !u!4 &9089538570691278729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -235037440669243492, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
-  m_PrefabInstance: {fileID: 187037487225229333}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8926305469355276638 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8752998889771100491, guid: 1dc44789c279e214da8a38a15bcb1191, type: 3}
   m_PrefabInstance: {fileID: 187037487225229333}
   m_PrefabAsset: {fileID: 0}

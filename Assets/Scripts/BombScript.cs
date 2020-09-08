@@ -33,7 +33,7 @@ public class BombScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        var controller = other.GetComponent<PlayerController>();
+        var controller = Pawn.FindPlayerController(other.gameObject);
         if (controller && controller != Owner)
         {
             controller.health.TakeDamage(Damage);

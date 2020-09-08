@@ -21,7 +21,7 @@ public class BlockMachineLogic : StateMachineBehaviour
     {
         if (animator.GetAnimatorTransitionInfo(0).anyState)
         {
-            PlayerController player = animator.gameObject.GetComponent<PlayerController>();
+            PlayerController player = Pawn.FindPlayerController(animator.gameObject);
             player.BlockingEnd();
         }
     }
@@ -41,14 +41,14 @@ public class BlockMachineLogic : StateMachineBehaviour
     // OnStateMachineEnter is called when entering a state machine via its Entry Node
     override public void OnStateMachineEnter(Animator animator, int stateMachinePathHash)
     {
-        PlayerController player = animator.gameObject.GetComponent<PlayerController>();
+        PlayerController player = Pawn.FindPlayerController(animator.gameObject);
         player.BlockingBegin();
     }
 
     // OnStateMachineExit is called when exiting a state machine via its Exit Node
     override public void OnStateMachineExit(Animator animator, int stateMachinePathHash)
     {
-        PlayerController player = animator.gameObject.GetComponent<PlayerController>();
+        PlayerController player = Pawn.FindPlayerController(animator.gameObject);
         player.BlockingEnd();
     }
 }
